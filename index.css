@@ -6,3 +6,7 @@
   height: 35px;
   width: 35px;
 }
+#task {
+  width: 344px;
+  border: 2px solid;
+}
