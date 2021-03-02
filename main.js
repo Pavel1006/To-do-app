@@ -1,8 +1,11 @@
 document.getElementById("button").onclick = function task() {
   let inptValue = document.getElementById("firstImp").value;
-  let taskInpt = (document.getElementById("task").innerHTML = inptValue);
   let text =
-    ' <div><input id="border" type="checkbox"><span> value</span><button type="button">delete</button></div><br>';
-
+    ' <div id="border"><input type="checkbox"><span id="val"> test 1</span><button id="delete" type="button">delete</button></div>';
+  /* document.getElementById("val").innerHTML = inptValue;
+  if (document.getElementById("delete").onclick) {
+   return (document.getElementById("delete").style.display = "none");
+  }
+  */
   return (document.getElementById("task").innerHTML = text);
 };

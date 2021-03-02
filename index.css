@@ -6,7 +6,11 @@
   height: 35px;
   width: 35px;
 }
-#task {
-  width: 344px;
+
+#border {
   border: 2px solid;
+  width: 344px;
+}
+#delete {
+  margin-left: 233px;
 }
