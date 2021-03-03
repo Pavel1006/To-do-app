@@ -47,7 +47,7 @@ function theTasks() {
   div.appendChild(input);
   div.appendChild(span);
   div.appendChild(button);
-
-  document.insertBefore(div, document.getElementById("task").childNodes[0]);
+  //sss
+  return document.getElementById("task").appendChild(div);
 }
 document.getElementById("button").onclick = theTasks;
