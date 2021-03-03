@@ -14,6 +14,7 @@ document.getElementById("button").onclick = task;
 document.getElementById("delete").onclick = function sterge() {
   return (document.getElementById("delete").style.display = "none");
 };*/
+
 function theTasks() {
   //create the elements
   let div = document.createElement("div");
@@ -26,7 +27,8 @@ function theTasks() {
   let idButton = document.createAttribute("id");
   let inpCheck = document.createAttribute("type");
   let buttonAtr = document.createAttribute("type");
-  //let inptValue = document.getElementById("firstImp").value;
+  //value of input
+  let inptValue = document.getElementById("firstImp").value;
   //set the value of atributes
   idDiv.value = "border";
   idSpan.value = "val";
@@ -40,14 +42,13 @@ function theTasks() {
   button.setAttributeNode(idButton);
   button.setAttributeNode(buttonAtr);
   //applend the text
-  //span.appendChild(inptValue);
+  //document.getElementById("val").attribute = inptValue;
   span.appendChild(document.createTextNode("test 1"));
   button.appendChild(document.createTextNode("delete"));
   //make the complete task
   div.appendChild(input);
   div.appendChild(span);
   div.appendChild(button);
-  //sss
   return document.getElementById("task").appendChild(div);
 }
 document.getElementById("button").onclick = theTasks;
