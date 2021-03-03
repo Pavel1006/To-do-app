@@ -14,31 +14,40 @@ document.getElementById("button").onclick = task;
 document.getElementById("delete").onclick = function sterge() {
   return (document.getElementById("delete").style.display = "none");
 };*/
+function theTasks() {
+  //create the elements
+  let div = document.createElement("div");
+  let span = document.createElement("span");
+  let input = document.createElement("input");
+  let button = document.createElement("button");
+  //create the atributes
+  let idDiv = document.createAttribute("id");
+  let idSpan = document.createAttribute("id");
+  let idButton = document.createAttribute("id");
+  let inpCheck = document.createAttribute("type");
+  let buttonAtr = document.createAttribute("type");
+  //let inptValue = document.getElementById("firstImp").value;
+  //set the value of atributes
+  idDiv.value = "border";
+  idSpan.value = "val";
+  idButton.value = "delete";
+  inpCheck.value = "checkbox";
+  buttonAtr.value = "button";
+  //set how's atribute is
+  div.setAttributeNode(idDiv);
+  span.setAttributeNode(idSpan);
+  input.setAttributeNode(inpCheck);
+  button.setAttributeNode(idButton);
+  button.setAttributeNode(buttonAtr);
+  //applend the text
+  //span.appendChild(inptValue);
+  span.appendChild(document.createTextNode("test 1"));
+  button.appendChild(document.createTextNode("delete"));
+  //make the complete task
+  div.appendChild(input);
+  div.appendChild(span);
+  div.appendChild(button);
 
-//create the elements
-let div = document.createElement("div");
-let span = document.createElement("span");
-let input = document.createElement("input");
-let button = document.createElement("button");
-//create the atributes
-let idDiv = document.createAttribute("id");
-let idSpan = document.createAttribute("id");
-let idButton = document.createAttribute("id");
-let inpCheck = document.createAttribute("type");
-let buttonAtr = document.createAttribute("type");
-let inptValue = document.getElementById("firstImp").value;
-//set the value of atributes
-idDiv.value = "border";
-idSpan.value = "val";
-idButton.value = "delete";
-inpCheck.value = "checkbox";
-buttonAtr.value = "button";
-//set how's atribute is
-div.setAttributeNode(idDiv);
-span.setAttributeNode(idSpan);
-input.setAttributeNode(inpCheck);
-button.setAttributeNode(idButton);
-button.setAttributeNode(buttonAtr);
-//applend the text
-span.appendChild(inptValue);
-button.appendChild(document.createTextNode("delete"));
+  document.insertBefore(div, document.getElementById("task").childNodes[0]);
+}
+document.getElementById("button").onclick = theTasks;
