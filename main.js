@@ -1,20 +1,3 @@
-/*function task() {
-  let inptValue = document.getElementById("firstImp").text;
-  let text =
-    ' <div id="border"><input type="checkbox"><span id="val"> test 1</span><button id="delete" type="button">delete</button></div>';
-  let v = (document.getElementById("val").innerHTML = inptValue);
-  if (document.getElementById("delete").onclick) {
-   return (document.getElementById("delete").style.display = "none");
-  }
-  
-  return document.write(v);
-  (document.getElementById("task").innerHTML = text);
-}
-document.getElementById("button").onclick = task;
-document.getElementById("delete").onclick = function sterge() {
-  return (document.getElementById("delete").style.display = "none");
-};*/
-
 function theTasks() {
   //create the elements
   let div = document.createElement("div");
@@ -43,13 +26,21 @@ function theTasks() {
   button.setAttributeNode(idButton);
   button.setAttributeNode(buttonAtr);
   //applend the text
-  //document.getElementById("val").attribute = inptValue;
   span.innerHTML = inptValue;
   button.appendChild(document.createTextNode("delete"));
   //make the complete task
   div.appendChild(input);
   div.appendChild(span);
   div.appendChild(button);
+  //delete button
+  if (button.clicked === true) {
+    return (div.innerHTML = "");
+  }
+  //check
+  //if (document.getElementById("delete").clicked === true) {
+  // alert("button was clicked");
+  //}
+  //result
   return document.getElementById("task").appendChild(div);
 }
 document.getElementById("button").onclick = theTasks;

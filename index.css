@@ -8,9 +8,11 @@
 }
 
 #border {
-  border: 2px solid;
+  border: 1px solid;
   width: 344px;
+  height: 30px;
 }
 #delete {
-  margin-left: 237px;
+  margin-right: 0px;
+  margin-top: 5px;
 }
