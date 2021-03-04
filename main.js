@@ -28,7 +28,8 @@ function theTasks() {
   let inpCheck = document.createAttribute("type");
   let buttonAtr = document.createAttribute("type");
   //value of input
-  let inptValue = document.getElementById("firstImp").value;
+  let inptHtml = document.getElementById("firstImp");
+  let inptValue = inptHtml.value;
   //set the value of atributes
   idDiv.value = "border";
   idSpan.value = "val";
@@ -43,7 +44,7 @@ function theTasks() {
   button.setAttributeNode(buttonAtr);
   //applend the text
   //document.getElementById("val").attribute = inptValue;
-  span.appendChild(document.createTextNode("test 1"));
+  span.innerHTML = inptValue;
   button.appendChild(document.createTextNode("delete"));
   //make the complete task
   div.appendChild(input);
