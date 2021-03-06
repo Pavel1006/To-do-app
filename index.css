@@ -3,8 +3,12 @@
   width: 300px;
 }
 #button {
+  font-weight: bold;
   height: 35px;
   width: 35px;
+}
+body {
+  font-family: "Lemonada", cursive;
 }
 .title {
   display: flex;
@@ -12,18 +16,26 @@
   align-content: center;
 }
 .mainDiv {
-  width: 347px;
+  width: 348px;
 }
 #border {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-  align-items: stretch;
   border: 1px solid;
   width: 344px;
   height: 30px;
-  align-content: center;
 }
 #val {
   flex-grow: 2;
+  display: flex;
+  align-self: center;
+}
+#task {
+  margin-top: 5px;
+}
+#input {
+  display: flex;
+  align-self: center;
+  margin-bottom: -2px;
 }
