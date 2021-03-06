@@ -4,6 +4,7 @@ function theTasks() {
   let span = document.createElement("span");
   let input = document.createElement("input");
   let button = document.createElement("button");
+
   //create the atributes
   let idDiv = document.createAttribute("id");
   let idSpan = document.createAttribute("id");
