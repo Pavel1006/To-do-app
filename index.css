@@ -8,11 +8,15 @@
 }
 
 #border {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;
   border: 1px solid;
   width: 344px;
   height: 30px;
+  align-content: center;
 }
-#delete {
-  margin-right: 0px;
-  margin-top: 5px;
+#val {
+  flex-grow: 2;
 }
