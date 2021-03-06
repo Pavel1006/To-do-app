@@ -25,22 +25,21 @@ function theTasks() {
   input.setAttributeNode(inpCheck);
   button.setAttributeNode(idButton);
   button.setAttributeNode(buttonAtr);
-  //applend the text
+  //append the text
   span.innerHTML = inptValue;
   button.appendChild(document.createTextNode("delete"));
   //make the complete task
   div.appendChild(input);
   div.appendChild(span);
   div.appendChild(button);
-  //delete button
-  if (button.clicked === true) {
-    return (div.innerHTML = "");
-  }
-  //check
-  //if (document.getElementById("delete").clicked === true) {
-  // alert("button was clicked");
-  //}
   //result
-  return document.getElementById("task").appendChild(div);
+  document.getElementById("task").appendChild(div);
+  //clean the input
+  inptHtml.value = "";
+  //delete button
+  button.addEventListener("click", function () {
+    return div.parentNode.removeChild(div);
+  });
 }
+
 document.getElementById("button").onclick = theTasks;
