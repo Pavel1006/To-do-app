@@ -4,8 +4,8 @@
 }
 #button {
   position: relative;
-  left: -6px;
-  bottom: -3px;
+  left: -1px;
+  bottom: 0px;
   font-weight: bold;
   font-size: 25px;
   height: 36px;
@@ -21,7 +21,13 @@ body {
 }
 .mainDiv {
   width: 348px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
+
 #border {
   display: flex;
   justify-content: space-around;
@@ -41,4 +47,62 @@ body {
 #input {
   position: relative;
   top: 7px;
+}
+#delete:active {
+  position: relative;
+  top: 1px;
+}
+
+#button:active {
+  position: relative;
+  top: 1px;
+}
+#border:active {
+  position: relative;
+  animation: delete 2s 1;
+  animation-timing-function: ease-in;
+}
+.inputAndButton {
+  display: flex;
+  flex-direction: row;
+}
+@keyframes delete {
+  0% {
+    opacity: 100%;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    opacity: 0%;
+    left: 100px;
+    top: 0px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #border {
+    width: auto;
+  }
+  .mainDiv {
+    width: auto;
+  }
+  #firstImp {
+    width: auto;
+  }
+  #button {
+    position: relative;
+    left: 0px;
+    bottom: 0.4px;
+  }
+}
+@keyframes delete {
+  0% {
+    opacity: 100%;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    opacity: 0%;
+    left: 0px;
+    top: 200px;
+  }
 }
