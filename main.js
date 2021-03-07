@@ -6,6 +6,7 @@ function theTasks() {
   let button = document.createElement("button");
 
   //create the atributes
+  let idInput = document.createAttribute("id");
   let idDiv = document.createAttribute("id");
   let idSpan = document.createAttribute("id");
   let idButton = document.createAttribute("id");
@@ -15,12 +16,14 @@ function theTasks() {
   let inptHtml = document.getElementById("firstImp");
   let inptValue = inptHtml.value;
   //set the value of atributes
+  idInput.value = "input";
   idDiv.value = "border";
   idSpan.value = "val";
   idButton.value = "delete";
   inpCheck.value = "checkbox";
   buttonAtr.value = "button";
   //set how's atribute is
+  input.setAttributeNode(idInput);
   div.setAttributeNode(idDiv);
   span.setAttributeNode(idSpan);
   input.setAttributeNode(inpCheck);

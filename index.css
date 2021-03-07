@@ -3,8 +3,12 @@
   width: 300px;
 }
 #button {
+  position: relative;
+  left: -6px;
+  bottom: -4px;
   font-weight: bold;
-  height: 35px;
+  font-size: 25px;
+  height: 36px;
   width: 35px;
 }
 body {
@@ -23,7 +27,7 @@ body {
   justify-content: space-around;
   flex-flow: row wrap;
   border: 1px solid;
-  width: 344px;
+  width: 340px;
   height: 30px;
 }
 #val {
@@ -35,7 +39,6 @@ body {
   margin-top: 5px;
 }
 #input {
-  display: flex;
-  align-self: center;
-  margin-bottom: -2px;
+  position: relative;
+  top: 7px;
 }
