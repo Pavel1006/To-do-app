@@ -1,34 +1,17 @@
-function theTasks() {
+function createTask() {
   //create the elements
   let div = document.createElement("div");
   let span = document.createElement("span");
   let input = document.createElement("input");
   let button = document.createElement("button");
-
-  //create the atributes
-  let idInput = document.createAttribute("id");
-  let idDiv = document.createAttribute("id");
-  let idSpan = document.createAttribute("id");
-  let idButton = document.createAttribute("id");
-  let inpCheck = document.createAttribute("type");
-  let buttonAtr = document.createAttribute("type");
-  //value of input
-  let inptHtml = document.getElementById("firstImp");
-  let inptValue = inptHtml.value;
-  //set the value of atributes
-  idInput.value = "input";
-  idDiv.value = "border";
-  idSpan.value = "val";
-  idButton.value = "delete";
-  inpCheck.value = "checkbox";
-  buttonAtr.value = "button";
-  //set how's atribute is
-  input.setAttributeNode(idInput);
-  div.setAttributeNode(idDiv);
-  span.setAttributeNode(idSpan);
-  input.setAttributeNode(inpCheck);
-  button.setAttributeNode(idButton);
-  button.setAttributeNode(buttonAtr);
+  let inptValue = document.getElementById("firstImp").value;
+  //put the atributes
+  input.type = "checkbox";
+  div.id = "border";
+  input.id = "input";
+  span.id = "val";
+  button.id = "delete";
+  button.type = "button";
   //append the text
   span.innerHTML = inptValue;
   button.appendChild(document.createTextNode("delete"));
@@ -39,11 +22,11 @@ function theTasks() {
   //result
   document.getElementById("task").appendChild(div);
   //clean the input
-  inptHtml.value = "";
+  document.getElementById("firstImp").value = "";
   //delete button
-  button.addEventListener("click", function () {
-    return div.parentNode.removeChild(div);
+  button.addEventListener("click", () => {
+    div.parentNode.removeChild(div);
   });
 }
 
-document.getElementById("button").onclick = theTasks;
+document.getElementById("button").onclick = createTask;
